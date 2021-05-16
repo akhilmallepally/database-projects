@@ -1,0 +1,10 @@
+Election Commission of India (ECI) wants to store all the information about the 2014 elections into the database They would like to store the following data. STATE consists of state_id, which serves as a unique identifier, state_name, headquarters. State_ame and headquarters are simple attributes.
+ECI will have one ELECTION COMMISION OFFICE in every state which is the highest decision-making body in that particular STATE. ELECTION COMMISION OFFICE information consists of an office_id, office_head(FirstName, LastName), address(Street, City), phoneNumber(areacode, number). Office_head is a composite attribute.
+POLLING STATION has a station_id, {Address(Street, City, State, Zip)} and phone_number(area code, local) to contact them. Station_id is a unique identifier. VOTER entity consists of the information about the voters who are utilizing their right to vote and this consists of voter_id, Name(FirstName, LastName) and station_id, where station_id is the STATION where the voter is going to vote. Here, station_id is a foreign key.
+PARTY party_id and  party_name where party_id is unique. PARTY represents political party. CANDIDATE candidate_id Name(FirstName, LastName) DoB and age, where candidate_id is the identifier. Here, age is derived attribute.
+
+Only one ELECTION COMMISION OFFICE is allocated to one STATE where all the decisions are made for that STATE.
+A STATE will have atleast one POLLING_STATION and may have many stations basing on the population and number of cities. 
+One VOTER will have a chance to vote in only one POLLING STATION and but a STATION STATION can have many voters with atleast one VOTER coming in. There is no chance for a STATION to be established in a place with no VOTERs.
+Each VOTER can vote to only one CANDIDATE. Each CANDIDATE can get multiple votes from VOTERS with atleast one VOTE. 
+Every CANDIDATE should be part of a political PARTY. Every  PARTY which is participating in elections in that STATE will have only one CANDIDATE to participate. Only one CANDIDATE is participated from one PARTYIf a candidate is not registered with any PARTY, he/she is not eligible to participate in the elections.
