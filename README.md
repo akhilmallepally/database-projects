@@ -1,1 +1,1 @@
-# sql-projects
+# Database design and SQL queries
